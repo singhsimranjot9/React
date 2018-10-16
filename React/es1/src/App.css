@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+}
+
+.uno,.due{
+	height:100px;
+	width:100%;
+}
+
+.tre{
+	height:200px;
+	width:15%;
+	float:right;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-right:20px;
+
+}
+
+.quattro{
+	float:left;
+	border:1px hidden red;
+	height:200px;
+	width:15%;
+	margin-left:42.5%;
+	margin-top:20px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dim{
+	font-size:50px;
+}
