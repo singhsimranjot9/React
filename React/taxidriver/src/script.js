@@ -3,7 +3,7 @@ $(function() {
 
     var animazione;
 
-    //creo gli oggetti del Dom
+    //creo oggetti del Dom
     var container = $('#container');
     var car = $('#car');
     var car_1 = $('#car_1');
