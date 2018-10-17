@@ -18,6 +18,7 @@ body{
     background-color: grey;
     overflow: hidden;
 }
+
 .line{
     position: absolute;
     height: 150px;
@@ -25,15 +26,19 @@ body{
     margin-left: 48%;
     background-color: white;
 }
+
 #line_1{
     top: -150px;
 }
+
 #line_2{
     top: 150px;
 }
+
 #line_3{
     top: 450px;
 }
+
 .car{
     position: absolute;
     height: 60px;
@@ -41,16 +46,19 @@ body{
     border-radius: 5px;
     box-shadow: 0px 1px 8px 0px purple;
 }
+
 #car{
     bottom: 8%;
     left: 60%;
     background-color: gold;
 }
+
 .taxi{
 	margin-top: 24px;
 	margin-left: 5px;
 	height: 12px;
 }
+
 .f_glass{
     position: absolute;
     height: 20%;
@@ -60,6 +68,7 @@ body{
     border-radius: 0px 0px 5px 5px;
     background-color: black;
 }
+
 .b_glass{
     position: absolute;
     height: 20%;
@@ -69,6 +78,7 @@ body{
     border-radius: 5px 5px 0px 0px;
     background-color: black;
 }
+
 .f_light_l{
     position: absolute;
     height: 10%;
@@ -78,6 +88,7 @@ body{
     border-radius: 5px 5px 0px 0px;
     background-color: lightyellow;
 }
+
 .f_light_r{
     position: absolute;
     height: 10%;
@@ -87,6 +98,7 @@ body{
     border-radius: 5px 5px 0px 0px;
     background-color: lightyellow;
 }
+
 .f_tyre_l{
     position: absolute;
     height: 20%;
@@ -96,6 +108,7 @@ body{
     left: -10%;
     border-radius: 5px 0px 0px 5px;
 }
+
 .f_tyre_r{
     position: absolute;
     height: 20%;
@@ -105,6 +118,7 @@ body{
     left: 100%;
     border-radius: 0px 5px 5px 0px;
 }
+
 .b_tyre_l{
     position: absolute;
     height: 20%;
@@ -114,6 +128,7 @@ body{
     left: -10%;
     border-radius: 5px 0px 0px 5px;
 }
+
 .b_tyre_r{
     position: absolute;
     height: 20%;
@@ -123,24 +138,28 @@ body{
     left: 100%;
     border-radius: 0px 5px 5px 0px;
 }
+
 #car_1{
     top: -100px;
     left: 60%;
     background-color: violet;
 	box-shadow: 0px 1px 8px 0px yellow;
 }
+
 #car_2{
     top: -200px;
     left: 40%;
     background-color: lightgreen;
 	box-shadow: 0px 1px 8px 0px blue;
 }
+
 #car_3{
     top: -350px;
     left: 50%;
     background-color: lightblue;
 	box-shadow: 0px 1px 8px 0px red;
 }
+
 #restart_div {
     position: absolute;
     height: 100%;
@@ -176,7 +195,6 @@ body{
     padding: 10px;
     box-shadow: 4px 4px 0px 1px #808080;
 }
-
 
 #last{
 	text-align: center;

@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import $ from 'jquery';
 import './script.js';
-
 
 class App extends Component {
   render() {
     return (
 
-      <div classNameName="App">
+    <div classNameName="App">
 
-	<body>
-		
+	<body>		
 			
 		<div id="tasti">
 			<pre>USARE I TASTI DIREZIONALI O WASD PER CONTROLLARE LA MACCHINA</pre>   
@@ -28,8 +25,6 @@ class App extends Component {
 			<div id="line_3" className="line"></div>
 			
 			<div id="car" className="car">  
-				
-
 				<div className="f_glass"></div>
 				<div className="b_glass"></div>
 				<div className="f_light_l"></div>
@@ -83,14 +78,8 @@ class App extends Component {
 		</div>
 
 	</body>
-		
-		
-		
-		
-		
-      </div>
-    );
-  }
-}
+	
+    </div>
+);}}
 
 export default App;

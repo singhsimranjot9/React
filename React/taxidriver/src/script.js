@@ -17,7 +17,7 @@ $(function() {
     var score = $('#score');
 
     //variabili di supporto
-    var container_left = parseInt(container.css('left'));   //Return string 35%
+    
     var container_width = parseInt(container.width());
     var container_height = parseInt(container.height());    
     var car_width = parseInt(car.width());
@@ -38,8 +38,8 @@ $(function() {
     /* ------------------------------codice di gioco------------------------------------------- */
 
     /*movimenti delle macchine*/                                                           //Quando si tiene premuta la freccia si attivano le 
-    $(document).on('keydown', function(e) {                                                //funzioni right,left,up,down
-        if (game_over === false) {														   //che continuano finche' non avviene il keyup o game over
+    $(document).on('keydown', function(e) {                                               //funzioni right,left,up,down
+        if (game_over === false) {														 //che continuano finche' non avviene il keyup o game over
             var key = e.keyCode;
             if ((key === 37 || key === 65) && move_left === false) {
                 move_left = requestAnimationFrame(left);                              //requestAnimationFrame--> al posto di set intervall
@@ -54,7 +54,7 @@ $(function() {
     });
 
     $(document).on('keyup', function(e) {                                                  //Quando si lascia la freccia viene 
-        if (game_over === false) {                        								   //interrotto il movimento della macchina
+        if (game_over === false) {                        								  //interrotto il movimento della macchina
             var key = e.keyCode;
             if (key === 37 || key === 65) {
                 cancelAnimationFrame(move_left);
@@ -71,16 +71,14 @@ $(function() {
             }
         }
     });
-																				
-																				
-																				           //funzioni per il movimento delle macchine nelle 4 
+																							//funzioni per il movimento delle macchine nelle 4 
 																				           //direzioni che vanno ad agire direttamente sul css 
-																				           //cambiano posizione e facendo muovere le macchine
+																				          //cambiano posizione e facendo muovere le macchine
 																				
 																				
     function left() {                                                                  
         if (game_over === false && parseInt(car.css('left')) > 0) {                   //Controllo che la macchina non esca fuori dal conteiner   
-            car.css('left', parseInt(car.css('left')) - 5);                           //del gioco
+            car.css('left', parseInt(car.css('left')) - 5);                          //del gioco
             move_left = requestAnimationFrame(left);
         }
     }
@@ -112,18 +110,18 @@ $(function() {
     /*macchine da schivare e linea della strada*/                                     
     animazione = requestAnimationFrame(repeat);
               //MAIN FUNCTION
-    function repeat() {                                                               //Controllo avvenuta collizione con una delle 3 macchine
+    function repeat() {                                                                    //Controllo avvenuta collizione con una delle 3 macchine
         if (collisione(car, car_1) || collisione(car, car_2) || collisione(car, car_3)) {
             stop_the_game();
             return;
         }
 
-        score_cont++;                                                                 //Aumento contatore dello score
+        score_cont++;                                                                  //Aumento contatore dello score
 
-        if (score_cont % 20 == 0) {
+        if (score_cont % 20 === 0) {
             score.text(parseInt(score.text()) + 1);
         }
-        if (score_cont % 200 == 0) {                                                  //Ad ogni +10 score aumenta la velocita 
+        if (score_cont % 200 === 0) {                                                  //Ad ogni +10 score aumenta la velocita 
             speed++;
             line_speed++;
         }
@@ -136,11 +134,10 @@ $(function() {
         line_down(line_2);
         line_down(line_3);
 
-		
         animazione = requestAnimationFrame(repeat);
     }
                                                                                            //Funzione che stampa random le macchine de schivare
-    function car_down(car) {                                       						   //e le linee della strada
+    function car_down(car) {                                       						  //e le linee della strada
         var car_current_top = parseInt(car.css('top'));  //Return -100px -200px -350px
         if (car_current_top > container_height) {
             car_current_top = -200;
@@ -148,7 +145,7 @@ $(function() {
             car.css('left', car_left);
         }
         car.css('top', car_current_top + speed);                                      //Le macchine scendono sempre piu velocemente 
-    }																			      //all'aumentare dello score		
+    }																			     //all'aumentare dello score		
 
     function line_down(line) {
         var line_current_top = parseInt(line.css('top'));
@@ -159,8 +156,8 @@ $(function() {
     }
 
     function stop_the_game() {                                                             //Quando avviene una collisione si attiva la funzione
-        game_over = true;																   //che interrompe tutte le animazioni e fa apparire		
-        cancelAnimationFrame(animazione);												   //il bottone restart			
+        game_over = true;																  //che interrompe tutte le animazioni e fa apparire		
+        cancelAnimationFrame(animazione);												  //il bottone restart			
         cancelAnimationFrame(move_right);
         cancelAnimationFrame(move_left);
         cancelAnimationFrame(move_up);
@@ -170,7 +167,7 @@ $(function() {
 		
 		
 		restart_btn.click(function() {                                                    //Bottone che riavvia il gioco
-			window.location.reload();       // ricarica pagina(f5)
+			window.location.reload();                                                    // ricarica pagina(f5)
 		});
 }
 
