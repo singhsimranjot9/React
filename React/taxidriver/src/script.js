@@ -1,5 +1,5 @@
 const $ = window.$;
-$(function() {
+$(function(){
 
     var animazione;
 
