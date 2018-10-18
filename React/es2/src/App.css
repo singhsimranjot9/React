@@ -1,5 +1,39 @@
-
 .App {
   text-align: center;
   margin: 40px;
+}
+
+input {
+	background-color: green;
+    color: white;
+}
+
+input:focus {
+    background-color: lightgreen;
+	color: black;
+}
+
+h1{
+	font-size:50px;
+	font-weight: normal;
+}
+
+.banda{
+	width:100%;
+	background-color:lightgreen;
+}
+
+.cerca{
+    background: url('searchicon.jpg') no-repeat;
+	width:40px;
+	height:40px;
+	margin-left:5px;
+	margin-bottom:5px;
+}
+
+.img{
+	margin-top:10px;
+	border:5px solid red;
+	width:300px;
+	height:300px;
 }

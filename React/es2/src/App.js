@@ -13,6 +13,7 @@ class App extends Component {
   onChange = (event) => {
     this.setState({ term: event.target.value });
   }
+  
   handleSubmit = (event) => {
     event.preventDefault();
     const api_key = 'dc6zaTOxFJmzC';
@@ -26,11 +27,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <form onSubmit={this.handleSubmit}>
+	  <div className="banda"><h1>GIF FINDER</h1></div>
+        <form className="form" onSubmit={this.handleSubmit}>
           <input value={this.state.term} onChange={this.onChange} />
-          <button>Search!</button>
+          <button className="cerca" ></button>
         </form>
-        <img src={this.state.img} height="200" alt={this.state.term} />
+        <img className="img" src={this.state.img} height="200" alt={this.state.term} />
       </div>
     );
   }
