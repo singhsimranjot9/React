@@ -157,14 +157,13 @@ $(function() {
 
     function stop_the_game() {                                                             //Quando avviene una collisione si attiva la funzione
         game_over = true;																  //che interrompe tutte le animazioni e fa apparire		
-        cancelAnimationFrame(animazione);												  //il bottone restart			
+        cancelAnimationFrame(animazione);												 //il bottone restart			
         cancelAnimationFrame(move_right);
         cancelAnimationFrame(move_left);
         cancelAnimationFrame(move_up);
         cancelAnimationFrame(move_down);
         restart_div.slideDown();
-        restart_btn.focus();//Si puo attivare da tastiera(invio o spazio)
-		
+        restart_btn.focus();																//Si puo attivare da tastiera(invio o spazio)
 		
 		restart_btn.click(function() {                                                    //Bottone che riavvia il gioco
 			window.location.reload();                                                    // ricarica pagina(f5)

@@ -1,0 +1,33 @@
+/* External Css Stylesheet  */
+
+
+.div_ext {
+  margin-left:10%;
+  margin-right:10%;
+  width:80%;
+  border: 1px solid red;
+}
+
+.p_ext {
+  padding: 10px;
+  color:red;
+  text-align:center;
+}
+
+
+
+
+/* CASO CSS MODULES */
+
+
+ :local(.container) {
+  margin-left:10%;
+  margin-right:10%;
+  width:80%;
+  border: 1px solid red;
+ }
+ :local(.content) {
+  padding: 10px;
+  color:red;
+  text-align:center;
+ } 
